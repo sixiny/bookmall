@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>书城会员注册页面</title>
+<link type="text/css" rel="stylesheet" th:href="@{/static/css/style.css}" >
+<style type="text/css">
+	h1 {
+		text-align: center;
+		margin-top: 200px;
+	}
+	
+	h1 a {
+		color:red;
+	}
+</style>
+</head>
+<body>
+		<div id="header">
+				<a th:href="@{/book.do}">
+					<img class="logo_img" alt="" th:src="@{/static/img/logo.gif}" />
+				</a>
+				<span class="wel_word"></span>
+				<div>
+					<span>欢迎<span class="um_span" th:if="${session.currUser!=null}" th:text="${session.currUser.uname}">张总</span>光临尚硅谷书城</span>
+					<a th:href="@{/order.do(operate='getOrderList')}">我的订单</a>
+					<a th:href="@{/user.do(operate=loginout)}">注销</a>&nbsp;&nbsp;
+					<a th:href="@{/page.do(operate='page', page='user/login')}">返回登录</a>
+				</div>
+		</div>
+		
+		<div id="main">
+		
+			<h1>注册成功! <a th:if="${session.currUser!=null}" th:href="@{/book.do}">转到主页</a></h1>
+	
+		</div>
+		
+		<div id="bottom">
+			<span>
+				YSX书城.Copyright &copy;2022
+			</span>
+		</div>
+</body>
+</html>
