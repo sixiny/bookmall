@@ -11,9 +11,9 @@ public class ConnUtil {
     //private static ThreadLocal<Object> threadLocal3 = new ThreadLocal<>();
 
     public static final String DRIVER = "com.mysql.cj.jdbc.Driver" ;
-    public static final String URL = "jdbc:mysql://localhost:3306/bookdb?useUnicode=true&characterEncoding=utf-8&useSSL=false";
-    public static final String USER = "root";
-    public static final String PWD = "ysx52smile...!" ;
+    public static final String URL = "";
+    public static final String USER = "";
+    public static final String PWD = "" ;
 
     private static Connection createConn(){
         try {
